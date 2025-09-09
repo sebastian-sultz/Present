@@ -86,16 +86,16 @@ export default function BloomingInteractiveTulip() {
   });
 
   const handleClick = () => {
-    setColor((prev) =>
-      prev === null
-        ? "#ff7eb9"
-        : prev === "#ff7eb9"
-        ? "#f9f871"
-        : prev === "#f9f871"
-        ? "#ff6f61"
-        : null
-    );
-  };
+  setColor((prev) =>
+    prev === null
+      ? "#ff7eb9" // pink
+      : prev === "#ff7eb9"
+      ? "#e172fc" // purple instead of yellow
+      : prev === "#e172fc"
+      ? "#ff6f61" // red
+      : null // reset to original
+  );
+};
 
   return (
     <div className="w-full h-screen bg-gradient-to-b from-gray-900 to-black">
